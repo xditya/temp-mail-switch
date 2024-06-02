@@ -206,8 +206,6 @@ async def open_mails_miniapp(ctx: BotContext[CallbackQueryEvent]):
     if mails is None:
         return await ctx.event.answer(show_alert=True, text=error)
     mails_list = generate_mails_list(mails)
-    if not mails_list:
-        return await ctx.event.answer(show_alert=True, text="Inbox is empty!")
     await ctx.event.answer(
         callback=AppPage(
             components=[
