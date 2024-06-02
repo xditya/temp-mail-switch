@@ -72,12 +72,8 @@ bot = Client(
 bot.set_bot_commands(
     [
         BotCommand("start", "Start the bot."),
-        BotCommand(
-            "logs",
-            "[ADMIN] Get bot logs.",
-            BotCommand("stats", "[ADMIN] Get bot stats."),
-            BotCommand("broadcast", "[ADMIN] Broadcast a message to all users."),
-        ),
+        BotCommand("logs", "[ADMIN] Get bot logs."),
+        BotCommand("stats", "[ADMIN] Get bot stats."),
     ]
 )
 
