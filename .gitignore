@@ -1,0 +1,5 @@
+downloads/
+.env
+*.log
+*.sqlite
+__pycache__/

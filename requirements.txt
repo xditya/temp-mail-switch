@@ -1,0 +1,5 @@
+python-decouple
+swibots==1.4.43
+sqlitedict
+requests
+bs4
