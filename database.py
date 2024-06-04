@@ -20,7 +20,11 @@ def set_domain(user_id, domain):
 
 
 def get_domain(user_id):
-    return db.get("domains", {}).get(user_id, None)
+    if domain := db.get("domains", {}).get(user_id, None) is not None:
+        return domain
+    else:
+        set_domain(user_id, "1secmail.com")
+        return "1secmail.com"
 
 
 def add_user(user_id):
